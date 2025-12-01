@@ -1,0 +1,40 @@
+name: Deploy Completo
+
+on:
+  push:
+    branches:
+      - master   # AGORA FUNCIONA NA SUA BRANCH ATUAL
+
+env:
+  ENVIRONMENT: dev  # valor padrão
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Definir ambiente baseado na branch
+        run: |
+          if [[ "${GITHUB_REF}" == "refs/heads/master" ]]; then
+            echo "ENVIRONMENT=prod" >> $GITHUB_ENV
+          else
+            echo "ENVIRONMENT=staging" >> $GITHUB_ENV
+          fi
+
+      - name: Usar secrets
+        run: |
+          echo "Usando credenciais de deploy..."
+          echo "Credenciais carregadas com sucesso"
+
+      - name: Mensagem final baseada no ambiente
+        run: |
+          if [[ "$ENVIRONMENT" == "prod" ]]; then
+            echo "Deploy em produção concluído"
+          elif [[ "$ENVIRONMENT" == "staging" ]]; then
+            echo "Deploy em staging concluído"
+          else
+            echo "Deploy em desenvolvimento concluído"
+          fi
