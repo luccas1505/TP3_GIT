@@ -3,10 +3,10 @@ name: Deploy Completo
 on:
   push:
     branches:
-      - master   # AGORA FUNCIONA NA SUA BRANCH ATUAL
+      - master
 
 env:
-  ENVIRONMENT: dev  # valor padrão
+  ENVIRONMENT: dev
 
 jobs:
   deploy:
