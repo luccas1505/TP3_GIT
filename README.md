@@ -1,84 +1,74 @@
-README – Trabalhos Práticos (TP1, TP2 e TP3)
-TP1 — Construção e Deploy da API devcalc
-Objetivo
+# 🚀 DevOps Pipeline com Java, Docker, Kubernetes e CI/CD
 
-Criar uma API Java simples, empacotar em .jar, gerar imagem Docker e subir containers funcionando.
+## 📌 Sobre o projeto
 
-Atividades Realizadas
+Este projeto demonstra a implementação completa de um fluxo de desenvolvimento moderno, incluindo build, containerização, orquestração e automação de deploy.
 
-Build da aplicação
+A aplicação base consiste em uma API Java, que foi empacotada, containerizada com Docker e implantada em um ambiente com Kubernetes, além de pipelines automatizados utilizando GitHub Actions.
 
-Execução do Maven: mvn clean install
+---
 
-Geração do artefato: target/devcalc-api-1.0.0.jar
+## 🛠️ Tecnologias utilizadas
 
-Testes executados com sucesso.
+* Java
+* Maven / Gradle
+* Docker
+* Kubernetes
+* GitHub Actions (CI/CD)
 
-Criação da imagem Docker
+---
 
-docker build -t devcalc-api:1.0.0 .
+## 🚀 Funcionalidades e etapas do projeto
 
-Execução dos containers
+### 🔹 Build e Empacotamento
 
-Múltiplos containers rodando corretamente na porta 7000.
+* Construção da aplicação com Maven
+* Geração de artefato `.jar`
+* Execução de testes automatizados
 
-Publicação no Docker Hub
+---
 
-Imagem disponível em: luccasoliveira/devcalc-api:latest
+### 🔹 Containerização com Docker
 
-TP2 — Kubernetes (Pods, ReplicaSets e Services)
-Objetivo
+* Criação de imagem Docker da aplicação
+* Execução de múltiplos containers
+* Publicação da imagem no Docker Hub
 
-Criar Pods, ReplicaSets, expor Services e validar comunicação interna entre componentes.
+---
 
-Atividades Realizadas
+### 🔹 Orquestração com Kubernetes
 
-Criação do primeiro Pod
+* Criação e gerenciamento de Pods
+* Uso de ReplicaSets para escalabilidade
+* Exposição de serviços via NodePort
+* Comunicação entre containers
 
-Pod Nginx funcionando.
+---
 
-Busybox acessando o serviço interno via wget.
+### 🔹 CI/CD com GitHub Actions
 
-Controle de Réplicas
+* Criação de múltiplos workflows automatizados
+* Execução de testes contínuos
+* Uso de variáveis de ambiente e secrets
+* Estratégia de matrix build
+* Deploy automatizado
 
-ReplicaSet configurado com 2 réplicas e posteriormente atualizado para 3.
+---
 
-Exposição via NodePort
+## 🎯 Objetivo
 
-Service publicado na porta 30003, acessível pelo navegador.
+Demonstrar na prática a integração entre desenvolvimento e operações (DevOps), aplicando conceitos modernos de automação, escalabilidade e entrega contínua.
 
-TP3 — Workflows GitHub Actions (CI/CD Completo)
-Objetivo
+---
 
-Implementar pipelines de CI/CD com múltiplos workflows, variáveis de ambiente, secrets, matrix e triggers.
+## 📊 Resultados
 
-Workflows Criados
+* Aplicação containerizada e funcional
+* Deploy automatizado com pipelines CI/CD
+* Ambiente orquestrado com Kubernetes
 
-Deploy Completo
+---
 
-Env Demo
+## 👨‍💻 Autor
 
-Gradle CI
-
-Hello CI/CD
-
-Release Deploy
-
-Java Matrix
-
-Secret Demo
-
-Run Tests
-
-Conclusão
-
-Todos os Trabalhos Práticos (TP1, TP2 e TP3) foram concluídos com sucesso.
-Cada etapa atende aos requisitos solicitados pelo professor, demonstrando domínio de:
-
-Build e empacotamento Java
-
-Docker e publicação de imagens
-
-Kubernetes (Pods, ReplicaSets, Services)
-
-CI/CD com GitHub Actions e múltiplos pipelines
+Luccas
